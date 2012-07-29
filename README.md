@@ -11,6 +11,7 @@ copy the manager.php and create a config-auth.php from the config-auth-example.p
 
 * user can have multiple emails.
 * currently login by email and password
+* call it staticly by accManager::function() or (Experimental) create an object from it to use several authentication engines instances.
 
 inside your php page:
  include 'manager.php';
@@ -35,7 +36,8 @@ function
 
 function for debugging
 ======================
-* accManager::test($id); - check db and authentication engine with output
+* accManager::check($id); - check db and authentication engine with output
+* accManager::test($id); - full testing routine. clearing db!!/rebuilding and checking
 * accManager::rebuild(); - rebuild database tables using config-auth.php preferences
 * accManager::clearDB(); - clear all data in db!!!
  
